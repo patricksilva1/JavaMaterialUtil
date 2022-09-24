@@ -8,7 +8,6 @@ public class Node<T extends Comparable<T>> {
 
     public Node(T data) {
         this.data = data;
-        
     }
 
     public T getData() {
