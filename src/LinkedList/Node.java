@@ -1,9 +1,9 @@
 package LinkedList;
 
 public class Node<T extends Comparable<T>> {
-    // This is the data we store in the data structure
+    // This is the data we store in the data structure.
     private T data;
-    // This is why linked lists need more memory than arrays
+    // This is why linked lists need more memory than arrays.
     private Node<T> nextNode;
 
     public Node(T data) {
