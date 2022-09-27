@@ -8,9 +8,9 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
     @Override
     public void insert(T data) {
+        ++this.numOfItems;
 
         if (root == null) {
-
             // This is the first item in the linked list
             root = new Node<T>(data);
         } else {
@@ -24,7 +24,7 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
     private void insertBeginning(T data) {
         Node<T> newNode = new Node<>(data);
         newNode.setNextNode(root);
-        root = newNode;
+        this.root = newNode;
     }
 
     // Because we have to start with the root mode
@@ -44,26 +44,29 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
     @Override
     public void remove(T data) {
-        if (root == null)
-            return;
+        if (root == null) return;
 
+        --this.numOfItems;
         // We want to remove the first node (root)
-        if (root.getData().compareTo(data) == 0) {
-            root = root.getNextNode();
+        if (this.root.getData().compareTo(data) == 0) {
+            this.root = this.root.getNextNode();
         } else {
             remove(data, root, root.getNextNode());
         }
 
     }
 
-    private void remove(T data, Node<T> previousNode, Node<T> actualNode) {
+    private void remove(T dataToRemove, Node<T> previousNode, Node<T> actualNode) {
 
         // We have to find the node we want to remove
         while (actualNode != null) {
-            if (actualNode.getData().compareTo(data) == 0) {
+            // This is the node we want to remove
+            if (actualNode.getData().compareTo(dataToRemove) == 0) {
+                // Update the references
                 numOfItems--;
                 previousNode.setNextNode(actualNode.getNextNode());
                 actualNode = null;
+                return;
             }
 
             previousNode = actualNode;
@@ -72,11 +75,11 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
     }
 
-
     @Override
     public void traverse() {
-        if (root == null) return;
-        Node<T> actualNode = root;
+        if (this.root == null) return;
+
+        Node<T> actualNode = this.root;
 
         while (actualNode != null) {
             System.out.println(actualNode);
@@ -87,8 +90,7 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
     @Override
     public int size() {
-        return numOfItems;
+        return this.numOfItems;
     }
-
 
 }
