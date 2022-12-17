@@ -6,7 +6,6 @@ public class Anagram {
 
         AnagramProblem ap = new AnagramProblem();
         System.out.println(ap.solve("restful".toCharArray(), "fluster".toCharArray()));
-
     }
 
 }
