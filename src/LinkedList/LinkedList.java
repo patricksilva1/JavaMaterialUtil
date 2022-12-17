@@ -38,7 +38,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             Node<T> newNode = new Node<>(data);
             node.setNextNode(newNode);
         }
-
     }
 
     @Override
@@ -53,7 +52,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
         } else {
             remove(data, root, root.getNextNode());
         }
-
     }
 
     private void remove(T dataToRemove, Node<T> previousNode, Node<T> actualNode) {
@@ -72,7 +70,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             previousNode = actualNode;
             actualNode = actualNode.getNextNode();
         }
-
     }
 
     @Override
@@ -86,7 +83,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             System.out.println(actualNode);
             actualNode = actualNode.getNextNode();
         }
-
     }
 
     @Override
