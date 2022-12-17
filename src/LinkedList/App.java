@@ -14,6 +14,4 @@ public class App {
         names.remove("Ana");
         names.traverse();
     }
-
-
 }

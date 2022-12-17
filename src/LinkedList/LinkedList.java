@@ -17,7 +17,6 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             // We know that this is not the first item in the linked list
             insertBeginning(data);
         }
-
     }
 
     // We just have to update the reference O(1)
@@ -44,7 +43,8 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
     @Override
     public void remove(T data) {
-        if (root == null) return;
+        if (root == null)
+            return;
 
         --this.numOfItems;
         // We want to remove the first node (root)
@@ -77,7 +77,8 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 
     @Override
     public void traverse() {
-        if (this.root == null) return;
+        if (this.root == null)
+            return;
 
         Node<T> actualNode = this.root;
 
@@ -92,5 +93,4 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
     public int size() {
         return this.numOfItems;
     }
-
 }

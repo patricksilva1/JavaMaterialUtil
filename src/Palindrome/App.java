@@ -9,5 +9,4 @@ public class App {
         System.out.println(pp.solve("radar"));
 
     }
-
 }

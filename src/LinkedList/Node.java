@@ -30,5 +30,4 @@ public class Node<T extends Comparable<T>> {
     public String toString() {
         return this.data.toString();
     }
-
 }

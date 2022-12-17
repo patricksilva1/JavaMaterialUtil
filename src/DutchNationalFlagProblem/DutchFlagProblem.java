@@ -32,7 +32,6 @@ public class DutchFlagProblem {
             } else {
                 j++;
             }
-
         }
     }
 
@@ -45,6 +44,4 @@ public class DutchFlagProblem {
     public void showResult() {
         System.out.println(Arrays.toString(nums));
     }
-
-
 }

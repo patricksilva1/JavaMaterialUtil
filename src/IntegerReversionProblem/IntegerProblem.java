@@ -13,5 +13,4 @@ public class IntegerProblem {
 
         return reversed;
     }
-
 }

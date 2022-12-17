@@ -14,7 +14,9 @@ public class App {
 
         long now = System.currentTimeMillis();
 
-        for (int i = 0; i < 500000; ++i) array.add(0, i);
+        for (int i = 0; i < 500000; ++i) {
+            array.add(0, i);
+        }
 
         System.out.println("Time taken for ArrayList: " + (System.currentTimeMillis() - now));
 
@@ -22,10 +24,10 @@ public class App {
 
         now = System.currentTimeMillis();
 
-        for (int i = 0; i < 500000; ++i) list.addFirst(i);
+        for (int i = 0; i < 500000; ++i)
+            list.addFirst(i);
 
         System.out.println("Time taken for LinkedList: " + (System.currentTimeMillis() - now));
 
     }
-
 }

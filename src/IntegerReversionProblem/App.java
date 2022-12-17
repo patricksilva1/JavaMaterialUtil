@@ -6,5 +6,4 @@ public class App {
 
         System.out.println(problem.reverse(12345));
     }
-
 }
