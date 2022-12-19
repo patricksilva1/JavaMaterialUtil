@@ -13,22 +13,26 @@ public class DutchFlagProblem {
     public void solve() {
         int i = 0;
         int j = 0;
+
         // We know that 1 is the middle item (0, 1, 2)
         int pivot = 1;
         int k = nums.length - 1;
 
         // It has O(N) linear running time complexity
         while (j <= k) {
-        // When item with index j = 0
+            
+            // When item with index j = 0
             if (nums[j] < pivot) {
                 swap(i, j);
                 i++;
                 j++;
-        // Item is 2
+
+                // Item is 2
             } else if (nums[j] > pivot) {
                 swap(j, k);
                 k--;
-        // The item is 1
+
+                // The item is 1
             } else {
                 j++;
             }
