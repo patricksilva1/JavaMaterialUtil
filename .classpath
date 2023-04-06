@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="leetcode-interview-questions/problem100/|leetcode-interview-questions/problem300/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/leetcode-interview-questions/problem100"/>
+	<classpathentry kind="src" path="src/leetcode-interview-questions/problem300"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="output" path="out/production/DataStructure1"/>
+</classpath>
