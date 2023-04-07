@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class Problem27Test {
 
 	@Test
-	public void testRemoveElement() {
+	 void testRemoveElement() {
 		// Test case 1
 		int[] nums1 = { 3, 2, 2, 3 };
 		int val1 = 3;
